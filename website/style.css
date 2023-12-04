@@ -1,0 +1,247 @@
+*{
+ box-sizing: border-box;
+ padding-left: 9px;
+ padding-right: 05px;
+}
+.head{
+    font-size: 23px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    color: rgb(111, 28, 189);
+}
+a{
+    text-decoration: none;
+    color: gray;
+    font-size: larger;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a:hover{
+    color:rgb(111, 28, 189) ;
+}
+ul{
+    list-style: none;
+display: flex;
+}
+li{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.head{
+    display: flex;
+    text-align: left;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+header{
+
+    padding-top:10px ;
+    padding-bottom:10px ;
+    padding-right:45px ;
+    background: white;
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+ border-bottom: 1px solid black;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 99;
+}
+.body{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    width: 35%;
+    text-align: center;
+}
+.title{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: bold;
+}
+.c{
+    display: flex;
+    color: rgb(111, 28, 189);
+    font-style: italic;
+    
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: rgb(117, 111, 111);
+font-weight: bold;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.buttons{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: smaller;
+    font-weight:bold;
+}
+.one{
+    margin-right: 10px;
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 7px;
+    border-radius: 10px;
+    background-color: rgb(111, 28, 189);
+    color: white;
+
+}
+.two{
+    margin-left: 5px;
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 7px;
+    background-color: rgb(111, 28, 189);
+    border-radius: 10px;
+    color: white;
+}
+.img{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-right: 40px;
+    clip-path: polygon(20% 0px, 100% 0%, 100% 100%, 0px 300%);
+    
+}
+.whole{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 750px;
+    
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: space-between;
+margin-bottom: 15px;
+}
+.f{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+}
+.f1{
+    display: flex;
+    color:rgb(111, 28, 189) ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    font-size: x-large;
+    font-weight: bold;
+}
+.f2{
+   display: flex;
+  color: rgb(102, 96, 96);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.foot{
+    display: flex;
+    flex-wrap: wrap;
+    font-style: italic;
+   
+}
+.logo{
+    display: flex;
+    justify-content: right;
+    font-size: 25px;
+    
+}
+.fa-facebook{
+    color: blueviolet;
+}
+.fa-youtube{
+    color: blueviolet;
+}
+.fa-instagram{
+    color: blueviolet;
+}
+.fa-facebook:hover{
+    color: blue;
+}
+.fa-instagram:hover{
+    color:rgb(172, 14, 172);
+}
+.fa-youtube:hover{
+    color: red;
+}
+@media  screen and (max-width:700px) {
+    nav{
+        display: none;
+    }
+    header{
+        
+       padding-top: 30px;
+       display: flex;
+       flex-direction: row-reverse;
+        padding-bottom: 20px;
+    }
+    .img{
+        display: none;
+    }
+    .body{
+      display: flex;
+    flex-wrap: wrap;
+text-align: center;
+width: 100%;
+padding-right: 25px;
+}
+.f,
+footer{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+padding-bottom: 20px;
+width: 100%;
+}
+.fa-bars{
+    color: rgb(112, 21, 197);
+    font-size: xx-large;
+    padding-top: 5px;
+}
+.f2{
+    padding-top: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+#check{
+    display: none;
+}
+}
+@media screen and (min-width:700px) {
+    .head{
+        align-self: left;
+        padding-right:450px ;
+    
+    }
+.fa-bars{
+    
+    display: none;
+}
+}
+#check{
+    display: none;
+}
