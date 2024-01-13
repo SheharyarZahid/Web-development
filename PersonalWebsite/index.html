@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/2882665ba0.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+  <style>
+    @media (max-width: 324px) {
+      .img {
+        height: 12vh;
+      }
+
+      .text {
+        font-size: small;
+      }
+
+      .test {
+        font-size: small;
+      }
+
+      #baseline {
+        font-size: x-small;
+      }
+
+      footer {
+        min-height: 10vh;
+      }
+
+      .texts {
+        font-size: small;
+      }
+
+      .fa {
+        font-size: 2vh;
+      }
+    }
+
+    @media(max-width: 450px) and (min-width:324px) {
+      .text {
+        font-size: small;
+      }
+
+      .img {
+        max-height: 20vh;
+      }
+
+      #baseline {
+        font-size: x-small;
+      }
+
+      .texts {
+        font-size: small;
+      }
+
+      footer {
+        min-height: 10vh;
+      }
+
+      .fa {
+        font-size: 3vh;
+      }
+
+      .test {
+        font-size: small;
+      }
+    }
+
+    .s1 {
+      width: 80px;
+      font-size: small;
+    }
+
+    @media(min-width: 451px) and (max-width:650px) {
+      .text {
+        font-size: medium;
+      }
+
+      .img {
+        max-height: 22vh;
+      }
+
+      #baseline {
+        font-size: small;
+      }
+
+      .texts {
+        font-size: small;
+      }
+
+      footer {
+        min-height: 10vh;
+      }
+
+      .s1 {
+        width: 100px;
+        font-size: large;
+      }
+
+      .test {
+        font-size: large;
+      }
+
+      .fa {
+        font-size: 3vh;
+      }
+    }
+    @media(min-width: 651px) and (max-width:879px) {
+      .text {
+        font-size: large;
+      }
+
+      .img {
+        max-height: 30vh;
+      }
+
+      #baseline {
+        font-size: small;
+      }
+
+      .texts {
+        font-size: medium;
+      }
+
+      footer {
+        min-height: 10vh;
+      }
+
+      .s1 {
+        width: 120px;
+        font-size: larger;
+      }
+
+      .test {
+        font-size: larger;
+      }
+
+      .fa {
+        font-size: 3vh;
+      }
+     
+    }
+    @media(min-width: 880px) and (max-width:1000px) {
+      .text {
+        font-size: large;
+      }
+
+      .img {
+        max-height: 30vh;
+      }
+
+      #baseline {
+        font-size: small;
+      }
+
+      .texts {
+        font-size: medium;
+      }
+
+      footer {
+        min-height: 10vh;
+      }
+
+      .s1 {
+        width: 120px;
+        font-size: larger;
+      }
+
+      .test {
+        font-size: larger;
+      }
+
+      .fa {
+        font-size: 3vh;
+      }
+     
+    }
+    @media(min-width: 1001px) and (max-width:1400px) {
+      .text {
+        font-size: large;
+      }
+
+      .img {
+        max-height: 30vh;
+      }
+
+      #baseline {
+        font-size: small;
+      }
+
+      .texts {
+        font-size: medium;
+      }
+
+      footer {
+        min-height: 10vh;
+      }
+
+      .s1 {
+        width: 120px;
+        font-size: larger;
+      }
+
+      .test {
+        font-size: larger;
+      }
+
+      .fa {
+        font-size: 3vh;
+      }
+     
+    }
+    .dark-mode {
+      background-color: #222831;
+      color: #fff;
+    }
+
+    .dark-mod {
+      background-color: #90a9d0;
+    }
+
+    footer {
+      background-color: #389c9f;
+    }
+
+    .color {
+      background-color: #40b2b5;
+    }
+
+    .custom-background {
+      clip-path: polygon(0 0, 100% 0, 100% 30%, 0 45%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+
+
+    #typing-animation {
+      display: flex;
+      align-items: center;
+    }
+
+    #typing-text {
+      margin-right: 8px;
+    }
+
+    #typing-cursor {
+      opacity: 0;
+      animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes zoomIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .zoom-in {
+      animation: zoomIn 1s ease-in-out;
+    }
+
+    @keyframes moveAway {
+      0% {
+        opacity: 0;
+        transform: translateX(-5%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes moveAwayl {
+      0% {
+        opacity: 0;
+        transform: translateX(5%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .move-awayl {
+      opacity: 0;
+      animation: moveAwayl 1s ease-in-out;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    .move-away {
+      opacity: 0;
+      animation: moveAway 1s ease-in-out;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes moveup {
+      0% {
+        opacity: 0;
+        transform: translateY(5%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes moveUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .texts {
+      opacity: 0;
+      animation: moveup 1s ease-in-out;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    .text {
+      opacity: 0;
+      animation: moveUp 1s ease-in-out;
+      animation-delay: 500ms;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes movedown {
+      0% {
+        opacity: 0;
+        transform: translateY(-5%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header {
+      animation: movedown 1s ease-in-out;
+    }
+
+    .baseline {
+      background-color: #2b7c7f;
+    }
+    
+  </style>
+</head>
+
+<body class="flex flex-col ">
+  <div id="background" class="custom-background color"></div>
+  <header class="bg-white m-5 mb-0 rounded-xl">
+    <div class="main flex flex-row ">
+      <div class="flex flex-grow">
+        <div class="mode flex justify-center items-center w-1/6 border-r-2  "><input id="checkbox"
+            class="cursor-pointer mt-1 ml-1 absolute w-5 h-5 opacity-0" type="checkbox"><i id="moon"
+            class="fa-solid bg-slate-700 fa-moon p-1   rounded-full hidden" style="color: #ffffff;"></i><i
+            class="fa-solid fa-sun p-1   rounded-full  border-orange-300 bg-orange-50 border-2" id="sun"
+            style="color: orange;"></i></div>
+        <div class="name font-medium py-5 ml-2">Sheharyar Zahid</div>
+      </div>
+      <div class="platforms flex items-center mr-4 text-lg"><i class="fas fa-bars" style="color: #000000;"></i></div>
+    </div>
+  </header>
+  <div class="container  h-full flex justify-center items-center flex-col ">
+    <div class="skillscircle  flex justify-center flex-row mt-[5vh]  items-center ">
+      <div class="skilltreeA flex flex-col mt-1 move-awayl">
+        <div class="s1 ml-7 mb-8 flex bg-white p-1 justify-center rounded-lg m-3 shadow-xl items-center">
+          <img class="h-5 flex pr-2"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm6BpuckObdIBnQCvtprbE3t_3G6lZS4FOH3n0d0YEzeiPu7i4UnMl1lfZmmE26qzDvFE&usqp=CAU"
+            alt="">HTML
+        </div>
+        <div class="s1  mb-8 flex bg-white p-1 justify-center rounded-lg m-3   shadow-xl items-center"><img
+            class="flex h-5 pr-2"
+            src="https://static-00.iconduck.com/assets.00/file-type-css-icon-1806x2048-r5fwjl3p.png" alt="">CSS</div>
+        <div class=" s1 p-1 flex ml-7 bg-white justify-center rounded-lg m-3 shadow-xl items-center"><img
+            class="flex h-5 pr-2"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZQEO-lCffJlch5n9TVZ34BYYoDNFQ9LUkqf1V9V64lA&s"
+            alt="">JS</div>
+      </div>
+      <div class="image flex justify-center"><img
+          class="rounded-full justify-center flex my-8 shadow-xl zoom-in  w-full img"
+          src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0580cbe2-abde-4db5-a269-2b97cc547429/df2lkah-99ef88c4-f247-4f0e-9e3c-94b53236f62c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA1ODBjYmUyLWFiZGUtNGRiNS1hMjY5LTJiOTdjYzU0NzQyOVwvZGYybGthaC05OWVmODhjNC1mMjQ3LTRmMGUtOWUzYy05NGI1MzIzNmY2MmMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.9c691JRQT7b9GM04PvXCJR2ibsz50hmB3Oz4wOEMx5E"
+          alt=""></div>
+      <div class="skilltreeA flex flex-col  move-away">
+        <div class="s1 mr-7 mb-8 flex bg-white p-1 justify-center rounded-lg m-3 shadow-xl items-center">
+          <img class="flex h-3 pr-1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_BuIzY141a5nIZoGEQkFYPN_f3bQddC4uu5ctRPO1Ftp6BNy_iV5foebwEIYesnZLA6c&usqp=CAU"
+            alt="">Tailwind
+        </div>
+        <div class="s1  mb-8 flex bg-white p-1 justify-center rounded-lg m-3   shadow-xl items-center ml-7">
+          <img class="h-5 flex pr-1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToTzXNJzhPlHpEo-V-jy5K6_OITJtQoP3XfQ&usqp=CAU"
+            alt="">Modder
+        </div>
+        <div class="s1 p-1 flex mr-7 bg-white justify-center rounded-lg m-3 shadow-xl items-center">
+          <img class="flex h-5 pr-1"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOa3FPojMHIsNMpv9f5TKLrcWT9chGsu-xI55D3TJN2jiPwV4qi_FBnQtpPs0Nad5ceM8&usqp=CAU"
+            alt="">Cracker
+        </div>
+      </div>
+    </div>
+    <div class="typing-animation flex justify-center mt-10 font-medium" id="typing-animation">
+      <span id="typing-text"></span>
+      <span id="typing-cursor" class="opacity-100 animate-blink">|</span>
+    </div>
+
+    <div class="text italic justify-center flex mt-9  font-medium ">
+      <b class="  px-1">Versatile Technomancer: Mastering</b> Game Modding,
+    </div>
+    <div class="text justify-center flex italic ">
+      Cracking, and Web Development Sorcery.
+    </div>
+    <div class="texts">
+      <div id="texts" class="paragraph flex justify-center text-center mx-10 mt-8 t text-gray-600 mb-10">Lorem ipsum
+        dolor
+        sit
+        amet consectetur adipisicing elit. Sunt eum quo labore nisi id consequuntur possimus maiores aperiam sapiente
+        fugit ducimus sed cupiditate, quod ea harum blanditiis. Blanditiis, fugit quo.</div>
+    </div>
+  </div>
+  <footer id="footer" class=" flex   w-full text-white  flex-row items-center  justify-between">
+    <div class="test pl-4 font-semibold text-slate-300 ">
+      My Social Media
+
+    </div>
+    <div class="icons flex items-center px-5 ">
+      <ul class="flex">
+        <li class="flex mr-5">
+          <div class="youtube">
+            <i
+              class="fa fa-youtube-play rounded-2xl  justify-center text-gray-500   ml-3  hover:text-red-600 cursor-pointer "></i>
+          </div>
+        </li>
+        <li class="flex mr-5">
+          <div class="linkedin">
+            <i class="fa fa-linkedin-square text-gray-500 hover:text-lime-800 cursor-pointer "></i>
+          </div>
+        </li>
+        <li class="flex mr-5">
+          <div class="github">
+            <i class="fa fa-github  text-gray-500  rounded-full hover:text-black w-full cursor-pointer"></i>
+          </div>
+        </li>
+        <li class="flex">
+          <div class="facebook"><i class="fa fa-facebook-square  text-gray-500  hover:text-blue-800 cursor-pointer "
+              aria-hidden="true"></i></div>
+    </div>
+    </li>
+    </ul>
+
+
+  </footer>
+
+  <div id="baseline" class="baseline flex w-full   py-2  justify-center items-center bottom-0">
+    <div class="flex flex-row items-center justify-center">
+      <DIV class="CREATOR flex text-slate-300 font-semibold">
+        Created By <div class="text-white pl-1">XD GAMING</div>
+      </DIV>
+      <div class="dot h-1 w-1 bg-slate-400 flex rounded-full mx-1"></div>
+      <div class="powerer flex text-slate-300 font-semibold">
+        Powered By <div class="text-white ml-1">1100</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const text = "Hi there, I'M Sheharyar Zahid";
+    const typingSpeed = 50;
+
+    const typingTextElement = document.getElementById('typing-text');
+    const typingCursorElement = document.getElementById('typing-cursor');
+
+    let charIndex = 0;
+
+    function type() {
+      if (charIndex < text.length) {
+        typingTextElement.textContent += text[charIndex];
+        charIndex++;
+        setTimeout(type, typingSpeed);
+      } else {
+        typingCursorElement.style.display = 'none';
+      }
+    }
+
+    setTimeout(type, 1000);
+    var body = document.body
+    var checkbox = document.getElementById('checkbox');
+    var background = document.getElementById('background');
+    var baseline = document.getElementById('baseline')
+    var footer = document.getElementById('footer')
+    var sun = document.getElementById('sun')
+    var moon = document.getElementById('moon')
+    var textparagraph = document.getElementById('texts')
+    checkbox.addEventListener('change', function () {
+      if (checkbox.checked) {
+        background.classList.add('dark-mode');
+        background.classList.remove('color');
+        baseline.style.backgroundColor = "#1f2a38"
+        footer.style.backgroundColor = "#222831"
+        body.classList.add('dark-mod')
+        sun.style.display = 'none'
+        moon.style.display = 'flex'
+        textparagraph.style.color = 'white';
+      }
+      if (!checkbox.checked) {
+        background.classList.remove('dark-mode');
+        background.classList.add('color');
+        baseline.style.backgroundColor = "#2b7c7f";
+        footer.style.backgroundColor = "#389c9f";
+        body.classList.remove('dark-mod')
+        moon.style.display = 'none'
+        sun.style.display = 'flex'
+        textparagraph.style.color = '#4b5563';
+
+      }
+    });
+  </script>
+
+</body>
+
+</html><p>gabardines</p>
