@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard-NOTES</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/2882665ba0.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="bg-black">
+    <header
+        class="border-b w-full flex justify-center items-center py-3 bg-black text-white font-semibold text-lg border-red-700">
+        Shery Notes
+    </header>
+    <div class="mains flex flex-row flex-wrap justify-center items-center mt-5 w-full">
+        <div class="main flex flex-wrap   justify-center " id="main">
+            <div
+                class="rounded-xl border w-80 m-3 h-56 flex text-white bg-black flex-col  border-red-700 my-4 py-3 px-4 ">
+                <div class="head flex text-2xl pb-2 ">
+                    Goto Gym</div>
+                <div class="body flex text-sm">
+                    Namaz, the Islamic prayer, holds numerous benefits for individuals who engage in its regular
+                    performance. Beyond its religious significance, Namaz serves as a means to establish a profound
+                    connection with the Creator, fostering inner peace and spiritual fulfillment.
+                </div>
+            </div>
+            <div id="op">
+                <div
+                    class="rounded-xl border w-80 m-3 h-56 flex text-white bg-black flex-col  border-red-700 my-4 py-3 px-4 ">
+                    <div class="head flex text-2xl  ">
+                        <input contenteditable="true" id="Title" type="text" class="bg-black " placeholder="Title...">
+                    </div>
+                        <div class="alert  text-xs hidden">Must be consist of numbers,alphabets</div>
+                        <div class="alerts  text-xs hidden">At least 6 words long</div>
+                    <div class="body flex text-sm pt-2">
+                        <textarea id="Textarea" placeholder="Description..." class="bg-black  h-32 w-full"></textarea>
+                    </div>
+                    <div class="buttons flex justify-end mt-1">
+                        <div id="l" class="cursor-not-allowed one flex text-white p-1 px-3 bg-slate-900 mr-2 rounded-lg">Save</div>
+                        <div id="p" class="cursor-not-allowed two flex text-white p-1 px-2 bg-slate-900 rounded-lg">Delete</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="ip"
+            class=" rounded-xl border w-80 m-3 flex h-56 text-white bg-black flex-col  border-red-700  py-3 px-4 ">
+            <div class="body flex text-sm justify-center my-10">
+                <div class="icon text-6xl flex ">
+                    <i class="fa-solid fa-plus" style="color: #ffffff;"></i>
+                </div>
+
+            </div>
+            <div class="head flex text-2xl pb-2 justify-center ">
+                Add New Option</div>
+        </div>
+    </div>
+    </div>
+    <script>
+         var ahhha = document.getElementById("op");
+        var content = ahhha.innerHTML
+               var title= document.getElementById("Title");
+var button1 = document.getElementById("l");
+var button2 = document.getElementById("p");
+
+title.addEventListener("input" , function (titled) {
+    var regex = /^[a-zA-Z0-9\s\S]{6,8}$/
+var titles = titled.target.value
+var valid = regex.test(titles)
+
+    if( title.value !== 0 ){
+        button1.style.background = "blue";  
+        button2.style.background = "red";
+        button1.style.cursor = "pointer";
+        button2.style.cursor = "pointer";
+
+        if(valid){
+            
+            button1.addEventListener("click", function () {
+                localStorage.setItem('Kela',content);
+    console.log(localStorage.getItem('Kela'));
+    button2.addEventListener("click", function () {
+        localStorage.removeItem('Kela',content);
+      
+    })
+});
+console.log('Click Save to Validate')
+}
+else {
+    console.log('Enter  correct data 6-8 characters long with at least one symbol')
+}
+}
+    if(title.value == 0){
+        button1.style.background = "#0f172a";  
+        button2.style.background = "#0f172a";
+        console.log("Enter something")   
+        button1.style.cursor = "not-allowed";
+        button2.style.cursor = "not-allowed";
+    }
+})
+
+
+
+        var defaultDiv = document.getElementById("ip");
+        var multipliedDivContainer = document.getElementById("op");
+        var main = document.getElementById("main");
+        var str = ` <div id="op">
+                <div
+                    class="rounded-xl border w-80 m-3 h-56 flex text-white bg-black flex-col  border-red-700 my-4 py-3 px-4 ">
+                    <div class="head flex text-2xl  ">
+                        <input input="" id="Title" type="text" class="bg-black " placeholder="Title...">
+                    </div>
+                        <div class="alert  text-xs hidden">Must be consist of numbers,alphabets</div>
+                        <div class="alerts  text-xs hidden">At least 6 words long</div>
+                    <div class="body flex text-sm pt-2">
+                        <textarea id="Textarea" placeholder="Description..." class="bg-black  h-32 w-full"></textarea>
+                    </div>
+                    <div class="buttons flex justify-end mt-1">
+                        <div id="l" class="cursor-not-allowed one flex text-white p-1 px-3 bg-slate-900 mr-2 rounded-lg">Save</div>
+                        <div id="p" class="cursor-not-allowed two flex text-white p-1 px-2 bg-slate-900 rounded-lg">Delete</div>
+                    </div>
+                </div>
+            </div>` ;
+
+ 
+
+
+
+        var counter = 1;
+        defaultDiv.addEventListener("click", function () {
+            counter += 1;
+            var multipliedDiv = document.createElement("div");
+            multipliedDiv.innerHTML = ' <div id="op"><div  class = "rounded-xl border w-80 m-3 h-56 flex text-white bg-black flex-col border-red-700 my-4 py-3 px-4 "><div class="head flex text-2xl  ">                <input input="" id="Title" type="text" class="bg-black " placeholder="Title...">  </div>    <div class="alert  text-xs hidden">Must be consist of numbers,alphabets</div>     <div class="alerts  text-xs hidden">At least 6 words long</div>   <div class="body flex text-sm pt-2">        <textarea id="Textarea" placeholder="Description..." class="bg-black  h-32 w-full"></textarea>                </div>         <div class="buttons flex justify-end mt-1">     <div id="l" class="cursor-not-allowed one flex text-white p-1 px-3 bg-slate-900 mr-2 rounded-lg">Save</div><div id="p" class="cursor-not-allowed two flex text-white p-1 px-2 bg-slate-900 rounded-lg">Delete</div>   </div>            </div>          </div>';
+            main.appendChild(multipliedDiv);
+            console.log("New Slot is created");
+
+        });
+    </script>
+</body>
+
+</html>
