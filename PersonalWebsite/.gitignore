@@ -1,0 +1,12 @@
+# .gitignore
+
+# Ignore node_modules directory and its contents
+/node_modules/
+/personalProject/
+
+# Ignore package.json and package-lock.json
+/package.json
+/package-lock.json
+
+# Ignore index.js
+/index.js
